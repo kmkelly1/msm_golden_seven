@@ -8,6 +8,7 @@ class DirectorsController < ApplicationController
   
   def show
     # Read one director
+    @director=Director.find(params[:id])
     render("layouts/directors/show_details.html.erb")
   end
   
