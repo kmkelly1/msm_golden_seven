@@ -29,6 +29,17 @@ class MoviesController < ApplicationController
   
   def create_row
     # create row in table for new movie
+    @movie = Movie.new
+    
+    @movie.name = params[:name]
+    @movie.year = params[:year]
+    @movie.duration = params[:duration]
+    @movie.description = params[:description]
+    @movie.image_url = params[:image_url]
+   
+
+    @movie.save
+    
     render("layouts/movies/show_details.html.erb")
   end
   
