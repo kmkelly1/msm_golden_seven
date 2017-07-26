@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   
   # Read index of directors
   get("/directors", :controller =>'directors', :action => 'index')
-  # Read just one director
-  get("/directors/:id", :controller =>'directors', :action => 'show')
   # Create form for director
   get("/directors/new_form", :controller => 'directors', :action => 'create_form')
+  # Read just one director
+  get("/directors/:id", :controller =>'directors', :action => 'show')
   # Create row for director
   get("/create_director", :controller => 'directors', :action => 'create_row')
   # Update form existing director

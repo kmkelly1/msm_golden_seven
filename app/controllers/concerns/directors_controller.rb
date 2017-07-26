@@ -25,7 +25,6 @@ class DirectorsController < ApplicationController
     # create form to add director
     
     
-    
     render("layouts/directors/create_form.html.erb")
   end
   
