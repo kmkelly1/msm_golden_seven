@@ -10,11 +10,18 @@ class ActorsController < ApplicationController
   
   def show
     # Read one actor
+    
+    @actor = Actor.find(params[:id])
     render("layouts/actors/show_details.html.erb")
   end
   
   def destroy
     # Deletes the row of a actor
+    
+    @actor = Actor.find(params[:id])
+
+    @actor.destroy 
+    
     render("layouts/actors/destroy.html.erb")
   end
   
