@@ -1,6 +1,10 @@
 class ActorsController < ApplicationController
+  
   def index
     # Read all actors
+    
+    @actors = Actor.all
+    
     render("/layouts/actors/index.html.erb")
   end
   
