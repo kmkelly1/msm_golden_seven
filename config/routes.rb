@@ -20,10 +20,10 @@ Rails.application.routes.draw do
   
   #Read index of all movies
   get("/movies", :controller =>'movies', :action => 'index')
-  #Read index of one movie
-  get("/movies/:id", :controller =>'movies', :action => 'show')
   #Create form for new movie
   get("/movies/new_form", :controller => 'movies', :action => 'create_form')
+  #Read index of one movie
+  get("/movies/:id", :controller =>'movies', :action => 'show')
   #Create row for new movie
   get("/create_movie", :controller => 'movies', :action => 'create_row')
   #Update form for existing movie

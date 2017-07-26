@@ -1,16 +1,24 @@
 class MoviesController < ApplicationController
   def index
-    # Read all Movies
-    render("/layouts/movies/index.html.erb")
+    @movies=Movie.all
+    
+  render("/layouts/movies/index.html.erb")
   end
   
   def show
     # Read one movie
+    
+    @movie = Movie.find(params["id"])
     render("layouts/movies/show_details.html.erb")
   end
   
   def destroy
     # Deletes the row of a movie
+    
+    movie = Movie.find(params[:id])
+
+    movie.destroy
+    
     render("layouts/movies/destroy.html.erb")
   end
   
