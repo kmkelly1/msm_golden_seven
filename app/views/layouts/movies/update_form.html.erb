@@ -9,7 +9,7 @@
       Name
     </label>
     <div class="col-sm-10">
-      <input type="text" id="name" name="name" placeholder="Name" class="form-control" value="<%= @movie.name %>">
+      <input type="text" id="title" name="title" placeholder="Title" class="form-control" value="<%= @movie.title %>">
     </div>
   </div>
 
@@ -59,4 +59,6 @@
       <input type="submit" value="Update Movie" class="btn btn-primary">
     </div>
   </div>
+  
+  <p><a href="/movies/<%= movie.id %>" class="btn btn-primary">Show details</a></p>
 </form>

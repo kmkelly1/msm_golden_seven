@@ -37,7 +37,7 @@ Rails.application.routes.draw do
   
   #Read index of all actors
   get("/actors", :controller =>'actors', :action => 'index')
-  #Create form for new actor
+  #mCreate form for new actor
   get("/actors/new_form", :controller => 'actors', :action => 'create_form')
   #Read index of one actor
   get("/actors/:id", :controller =>'actors', :action => 'show')
