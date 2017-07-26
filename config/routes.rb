@@ -37,10 +37,10 @@ Rails.application.routes.draw do
   
   #Read index of all actors
   get("/actors", :controller =>'actors', :action => 'index')
-  #Read index of one actor
-  get("/actors/:id", :controller =>'actors', :action => 'show')
   #Create form for new actor
   get("/actors/new_form", :controller => 'actors', :action => 'create_form')
+  #Read index of one actor
+  get("/actors/:id", :controller =>'actors', :action => 'show')
   #Create row for new actor
   get("/create_actor", :controller => 'actors', :action => 'create_row')
   #Update form for existing actor

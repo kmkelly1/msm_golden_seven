@@ -27,21 +27,44 @@ class ActorsController < ApplicationController
   
   def create_form
     # create form to add actor
+    
     render("layouts/actors/create_form.html.erb")
   end
   
   def create_row
     # create row in table for new actor
+    
+    @actor = Actor.new
+    @actor.dob = params[:dob]
+    @actor.name = params[:name]
+    @actor.bio = params[:bio]
+    @actor.image_url = params[:image_url]
+
+    @actor.save
+    
     render("layouts/actors/show_details.html.erb")
   end
   
   def update_form
     # update form for existing actor
+    
+    @actor = Actor.find(params[:id])
+    
     render("layouts/actors/update_form.html.erb")
   end
   
   def update_row
     # update row for existing actor
+    
+    @actor = Actor.find(params[:id])
+
+    @actor.dob = params[:dob]
+    @actor.name = params[:name]
+    @actor.bio = params[:bio]
+    @actor.image_url = params[:image_url]
+
+    @actor.save
+    
     render("layouts/actors/show_details.html.erb")
   end
 end
