@@ -45,11 +45,23 @@ class MoviesController < ApplicationController
   
   def update_form
     # update form for existing movie
+    @movie = Movie.find(params[:id])
+    
     render("layouts/movies/update_form.html.erb")
   end
   
   def update_row
     # update row for existing movie
+    
+    @movie = Movie.find(params[:id])
+    
+    @movie.name = params[:name]
+    @movie.year = params[:year]
+    @movie.duration = params[:duration]
+    @movie.description = params[:description]
+    @movie.image_url = params[:image_url]
+    
+    
     render("layouts/movies/show_details.html.erb")
   end
 end
